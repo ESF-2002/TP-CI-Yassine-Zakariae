@@ -1,7 +1,7 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { vitePlugin as remix } from "@remix-run/dev";
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
-import { defineConfig as vitestDefineConfig } from 'vitest/config'; // Import Vitest config definition
 
 declare module "@remix-run/node" {
   interface Future {
