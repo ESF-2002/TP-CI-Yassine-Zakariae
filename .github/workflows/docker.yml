@@ -3,7 +3,7 @@ name: Docker Image CI/CD
 on:
   push:
     branches:
-      - main
+      - main   # Trigger the action on commits to the main branch
 
 jobs:
   build-and-push:
@@ -27,11 +27,11 @@ jobs:
       - name: Log in to Docker Hub
         uses: docker/login-action@v2
         with:
-username: ${{ secrets.DOCKER_USERNAME }}
+          username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_API_KEY }}
 
       - name: Build Docker image
-        run: docker build -t yassine659/my-hello-world:latest .
+        run: docker build -t yourusername/yourimagename:latest .
 
       - name: Push Docker image to Docker Hub
-        run: docker push yassine659/my-hello-world:latest
+        run: docker push yourusername/yourimagename:latest
