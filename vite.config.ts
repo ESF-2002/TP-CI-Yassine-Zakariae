@@ -24,6 +24,6 @@ export default defineConfig({
   ],
   test: {
     globals: true, // Ensure global test functions are available
-    environment: 'node', // Set environment to node (or 'jsdom' for browser-related tests)
-  }
+    environment: "node", // Set environment to node (or 'jsdom' for browser-related tests)
+  },
 });
